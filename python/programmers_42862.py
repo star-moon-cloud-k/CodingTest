@@ -7,14 +7,23 @@ def solution(n, lost, reserve):
     
     for i in reserve:
         student[i-1] += 1
-    student.sort(reverse = True)
+    # student.sort(reverse = True)
     print(student)
     
-    for i in range(n-1):
-        if student[i-1] >= 1:
-            student[i-1] -= 1
-            student[i] += 1
-        
+    for i in range(n):
+        if student[i] > 1:
+            front, back = i - 1, i + 1
+            
+            if 0 <= front < n and student[front] == 0:
+                student[i] -= 1
+                student[front] += 1
+            elif 0 <= back < n and student[back] == 0:
+                student[i] -= 1
+                student[back] += 1
+        # if student[i-1] >= 1:
+        #     student[i-1] -= 1
+        #     student[i] += 1
+
     print(student)
         
         
