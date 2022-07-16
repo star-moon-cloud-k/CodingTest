@@ -2,9 +2,6 @@
 
 n = int(input())
 
-Hours = 0
-Minutes = 0
-Seconds = 0
 
 counter = 0
 for hour in range(n+1):

@@ -8,7 +8,6 @@ N = int(input())
 
 #이동 경로받기
 move = list(input().upper().split())
-print (move)
 #좌표 설정
 x = 1
 y = 1
